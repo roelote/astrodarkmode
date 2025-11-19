@@ -1,0 +1,45 @@
+---
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+---
+
+<div class="container mx-auto">
+    <div class="my-swiper">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+            <div class="swiper-slide"><img class="h-[700px] w-full object-cover" src="/swiper/machu-picchu-viajes-1.jpg" alt="Machu Picchu" /></div>
+            <div class="swiper-slide"><img class="h-[700px] w-full object-cover" src="/swiper/sanctuary-of-machu-picchu--054.jpg" alt="Sanctuary of Machu Picchu" /></div>
+
+            </div>
+
+            <!-- Opcionales -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        </div>
+</div>
+
+<!-- JS del cliente -->
+<script>
+  import Swiper from "swiper";
+  import { Navigation, Pagination } from "swiper/modules";
+
+  // Inicializar al cargar el navegador
+  new Swiper(".swiper", {
+    modules: [Navigation, Pagination],
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
