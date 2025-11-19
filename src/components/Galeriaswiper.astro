@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import imagen1 from '../assets/swiper/machu-picchu-viajes-1.jpg';
+import imagen2 from '../assets/swiper/sanctuary-of-machu-picchu--054.jpg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,8 +12,12 @@ import 'swiper/css/pagination';
         <div class="swiper">
             <div class="swiper-wrapper">
 
-            <div class="swiper-slide"><img class="h-[700px] w-full object-cover" src="/swiper/machu-picchu-viajes-1.jpg" alt="Machu Picchu" /></div>
-            <div class="swiper-slide"><img class="h-[700px] w-full object-cover" src="/swiper/sanctuary-of-machu-picchu--054.jpg" alt="Sanctuary of Machu Picchu" /></div>
+            <div class="swiper-slide">
+                <Image src={imagen1} alt="Machu Picchu" class="h-[700px] w-full object-cover" />
+            </div>
+            <div class="swiper-slide">
+                <Image src={imagen2} alt="Sanctuary of Machu Picchu" class="h-[700px] w-full object-cover" />
+            </div>
 
             </div>
 
